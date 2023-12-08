@@ -1,0 +1,54 @@
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .checkbox-container input {
+    display: none;
+  }
+  
+  .checkmark {
+    width: 0.9em;
+    height: 0.9em;
+    border-radius: 50%;
+    border: 2px solid #2196F3;
+    margin-left: 1em;
+    position: relative;
+
+  }
+  
+  .checkmark-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.7em;
+    height: 0.7em;
+    fill: #FFFFFF;
+    z-index:1;
+  }
+
+  .task-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0.8em;
+  }
+
+
+  .task-heading {
+    font-size: 1.3em;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 0.3em;
+  }
+
+  .task-subheading {
+    color: grey;
+    font-size:1em;
+  }
+  
+
+
+  
