@@ -33,7 +33,8 @@
   .task-info {
     display: flex;
     flex-direction: column;
-    margin: 0.8em;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
   }
 
 
@@ -41,7 +42,7 @@
     font-size: 1.3em;
     color: #333;
     font-weight: 500;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.1em;
   }
 
   .task-subheading {
@@ -49,6 +50,26 @@
     font-size:1em;
   }
   
+  .progress-bar-container {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0.5em;
+    width: 60vw;
+    margin-left: 2.7em;
+  }
 
-
+  .progress {
+    display: flex;
+    flex-direction: column;
+    width: 62.7vw;;
+  }
   
+  .progress-bar-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.9em;
+    font-weight: 500;
+
+  }

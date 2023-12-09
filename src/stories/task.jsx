@@ -1,7 +1,30 @@
 import React from "react";
 import "./task.css";
 
-const Checkbox = ({ label1, label2, isChecked, onChange }) => {
+const ProgressBar = ({ percentageCompletion }) => {
+  const progressStyle = {
+    width: `${percentageCompletion}%`,
+    height: "5px",
+    backgroundColor: "#2196F3",
+    transition: "width 0.3s ease",
+  };
+
+  return (
+    <div className="progress-bar-container">
+      {percentageCompletion > 0 && (
+        <div style={progressStyle} className="progress-bar"></div>
+      )}
+    </div>
+  );
+};
+
+const Checkbox = ({
+  label1,
+  label2,
+  isChecked,
+  onChange,
+  percentageCompletion,
+}) => {
   const handleCheckboxChange = () => {
     onChange(!isChecked);
   };
@@ -49,6 +72,10 @@ const Checkbox = ({ label1, label2, isChecked, onChange }) => {
           <label className="task-heading">{label1}</label>
           <label className="task-subheading">{label2}</label>
         </div>
+      </div>
+      <div className="progress">
+        <label className="progress-bar-label">{percentageCompletion}% Complete</label>
+        <ProgressBar percentageCompletion={percentageCompletion} />
       </div>
     </div>
   );
