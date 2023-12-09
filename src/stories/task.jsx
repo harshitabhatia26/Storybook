@@ -11,7 +11,7 @@ const ProgressBar = ({ percentageCompletion }) => {
 
   return (
     <div className="progress-bar-container">
-      {percentageCompletion > 0 && (
+      {percentageCompletion >= 0 && (
         <div style={progressStyle} className="progress-bar"></div>
       )}
     </div>
